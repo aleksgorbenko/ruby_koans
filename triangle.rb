@@ -14,6 +14,10 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
+  a, b, c = [a,b,c].sort
+  raise TriangleError, "No sides can be 0 or below" if [a, b, c].any? { |side| side <= 0}
+  raise TriangleError, "No sum of any 2 sides should be lower than the third side" if a + b < c || a + b == c
+
   if a == b && b == c
     :equilateral
   elsif a == b || a == c || b == c
