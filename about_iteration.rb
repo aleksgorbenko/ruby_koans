@@ -118,6 +118,8 @@ class AboutIteration < Neo::Koan
   #   file = File.open(filename)
   #   # code to read 'file'
   #
+  #   We need to use file as a variable in the code block, therefore we need to explicitly declare it between the DO and END block.
+  #
   # When you get to the "AboutSandwichCode" koan, recheck your answer.
 
 end
